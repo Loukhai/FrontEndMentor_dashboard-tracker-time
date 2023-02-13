@@ -15,5 +15,5 @@
 .DS_Store
 .prettierignore
 
-readme.md
-readme-template-md
+.readme.md
+.readme-template.md
