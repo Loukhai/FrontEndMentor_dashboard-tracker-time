@@ -13,109 +13,147 @@
     />
 
     <title>Frontend Mentor | Time tracking dashboard</title>
-
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+    </style>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="dashboard">
-      <div class="dashboard__side">
-        <div class="side__user">
-          <div class="user">
-            <img
-              class="user__avatar"
-              src="images/image-jeremy.png"
-              alt="user-avatar"
+      <div class="user__side">
+        <div class="user">
+          <img
+            class="user__avatar"
+            src="images/image-jeremy.png"
+            alt="user-avatar"
+          />
+          <span aria-describedby="username">
+            <p class="text">Report for</p>
+            <p class="user__name">jeremy robson</p>
+          </span>
+        </div>
+        <form class="filter">
+          <span class="filter__period">
+            <input
+              type="radio"
+              name="period"
+              id="daily"
+              value="daily"
+              checked
             />
-            <div class="user__name" aria-describedby="user-name">
-              <div class="firstname">Jeremy</div>
-              <div class="lastname">Robson</div>
+            <label for="daily">Daily</label>
+          </span>
+          <span class="filter__period">
+            <input type="radio" name="period" id="weekly" value="weekly" />
+            <label for="weekly">Weekly</label>
+          </span>
+          <span class="filter__period">
+            <input type="radio" name="period" id="monthly" value="monthly" />
+            <label for="monthly">Monthly</label>
+          </span>
+        </form>
+      </div>
+      <div class="trackers__side">
+        <div class="tracker">
+          <div class="tracker__icon">
+            <img src="images/icon-work.svg" alt="work" />
+          </div>
+          <div class="tracker__time">
+            <div class="tracker__head">
+              <p class="tracker__activity">Work</p>
+              <div class="tracker__more">
+                <img src="images/icon-ellipsis.svg" alt="more" />
+              </div>
+            </div>
+            <div class="tracker__body">
+              <p class="tracker__hours">32hrs</p>
+              <p class="tracker__last">Last Week - 36hrs</p>
             </div>
           </div>
         </div>
-        <div class="side__filter">
-          <p class="period">Daily</p>
-          <p class="period">Weekly</p>
-          <p class="period">Monthly</p>
-        </div>
-      </div>
-
-      <div class="dashboard__trackers">
-        <div class="box__tracker">
-          <figure class="svg">
-            <img src="images/icon-work.svg" alt="svg" />
-          </figure>
-          <div class="box__head">
-            <div class="activity">Work</div>
-            <div class="more">...</div>
+        <div class="tracker">
+          <div class="tracker__icon">
+            <img src="images/icon-work.svg" alt="work" />
           </div>
-          <div class="box__time">
-            <div class="hours">32hrs</div>
-            <div class="last">last Week - 36hrs</div>
+          <div class="tracker__time">
+            <div class="tracker__head">
+              <p class="tracker__activity">Work</p>
+              <div class="tracker__more">
+                <img src="images/icon-ellipsis.svg" alt="more" />
+              </div>
+            </div>
+            <div class="tracker__body">
+              <p class="tracker__hours">32hrs</p>
+              <p class="tracker__last">Last Week - 36hrs</p>
+            </div>
           </div>
         </div>
-        <div class="box__tracker">
-          <figure class="svg">
-            <img src="images/icon-work.svg" alt="svg" />
-          </figure>
-          <div class="box__head">
-            <div class="activity">Work</div>
-            <div class="more">...</div>
+        <div class="tracker">
+          <div class="tracker__icon">
+            <img src="images/icon-work.svg" alt="work" />
           </div>
-          <div class="box__time">
-            <div class="hours">32hrs</div>
-            <div class="last">last Week - 36hrs</div>
-          </div>
-        </div>
-        <div class="box__tracker">
-          <figure class="svg">
-            <img src="images/icon-work.svg" alt="svg" />
-          </figure>
-          <div class="box__head">
-            <div class="activity">Work</div>
-            <div class="more">...</div>
-          </div>
-          <div class="box__time">
-            <div class="hours">32hrs</div>
-            <div class="last">last Week - 36hrs</div>
+          <div class="tracker__time">
+            <div class="tracker__head">
+              <p class="tracker__activity">Work</p>
+              <div class="tracker__more">
+                <img src="images/icon-ellipsis.svg" alt="more" />
+              </div>
+            </div>
+            <div class="tracker__body">
+              <p class="tracker__hours">32hrs</p>
+              <p class="tracker__last">Last Week - 36hrs</p>
+            </div>
           </div>
         </div>
-        <div class="box__tracker">
-          <figure class="svg">
-            <img src="images/icon-work.svg" alt="svg" />
-          </figure>
-          <div class="box__head">
-            <div class="activity">Work</div>
-            <div class="more">...</div>
+        <div class="tracker">
+          <div class="tracker__icon">
+            <img src="images/icon-work.svg" alt="work" />
           </div>
-          <div class="box__time">
-            <div class="hours">32hrs</div>
-            <div class="last">last Week - 36hrs</div>
-          </div>
-        </div>
-        <div class="box__tracker">
-          <figure class="svg">
-            <img src="images/icon-work.svg" alt="svg" />
-          </figure>
-          <div class="box__head">
-            <div class="activity">Work</div>
-            <div class="more">...</div>
-          </div>
-          <div class="box__time">
-            <div class="hours">32hrs</div>
-            <div class="last">last Week - 36hrs</div>
+          <div class="tracker__time">
+            <div class="tracker__head">
+              <p class="tracker__activity">Work</p>
+              <div class="tracker__more">
+                <img src="images/icon-ellipsis.svg" alt="more" />
+              </div>
+            </div>
+            <div class="tracker__body">
+              <p class="tracker__hours">32hrs</p>
+              <p class="tracker__last">Last Week - 36hrs</p>
+            </div>
           </div>
         </div>
-        <div class="box__tracker">
-          <figure class="svg">
-            <img src="images/icon-work.svg" alt="svg" />
-          </figure>
-          <div class="box__head">
-            <div class="activity">Work</div>
-            <div class="more">...</div>
+        <div class="tracker">
+          <div class="tracker__icon">
+            <img src="images/icon-work.svg" alt="work" />
           </div>
-          <div class="box__time">
-            <div class="hours">32hrs</div>
-            <div class="last">last Week - 36hrs</div>
+          <div class="tracker__time">
+            <div class="tracker__head">
+              <p class="tracker__activity">Work</p>
+              <div class="tracker__more">
+                <img src="images/icon-ellipsis.svg" alt="more" />
+              </div>
+            </div>
+            <div class="tracker__body">
+              <p class="tracker__hours">32hrs</p>
+              <p class="tracker__last">Last Week - 36hrs</p>
+            </div>
+          </div>
+        </div>
+        <div class="tracker">
+          <div class="tracker__icon">
+            <img src="images/icon-work.svg" alt="work" />
+          </div>
+          <div class="tracker__time">
+            <div class="tracker__head">
+              <p class="tracker__activity">Work</p>
+              <div class="tracker__more">
+                <img src="images/icon-ellipsis.svg" alt="more" />
+              </div>
+            </div>
+            <div class="tracker__body">
+              <p class="tracker__hours">32hrs</p>
+              <p class="tracker__last">Last Week - 36hrs</p>
+            </div>
           </div>
         </div>
       </div>

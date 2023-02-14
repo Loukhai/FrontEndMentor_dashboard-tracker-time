@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 :root {
   /* font */
   --font-base: "Rubik", sans-serif;
@@ -7,7 +6,7 @@
   /* colors */
   /* -- Primary -- */
   --Blue: hsl(246, 80%, 60%);
-  --Light-red: hsl(15, 100%, 70%);
+  --Light-orange: hsl(15, 100%, 70%);
   --Soft-blue: hsl(195, 74%, 62%);
   --Light-red: hsl(348, 100%, 68%);
   --Lime-green: hsl(145, 58%, 55%);
@@ -43,100 +42,144 @@ body {
 
 /* dashboard */
 .dashboard {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  width: 77.11%;
+  min-height: 80vh;
+  border: 0.5px var(--Light-red) solid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 27px;
-  width: 100%;
-  max-width: 77.23%;
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 
-.dashboard__side {
+.user__side {
+  grid-column: 1/2;
+  grid-row: 1/3;
   background-color: var(--Dark-blue);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-}
-.side__user {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--Blue);
-  border-radius: var(--border-radius);
-
-  padding: 35px 90px 90px 35px;
-  width: 100%;
+  border-radius: 17px;
+  /* min-width: 70%; */
 }
 .user {
-  /* width: 100%; */
   display: flex;
-  flex-direction: column; /* + row */
-  gap: 72px; /* +18px*/
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* +row*/
+  flex-wrap: nowrap;
+  gap: 45px;
+  background-color: var(--Blue);
+  padding-top: 35px;
+  padding-left: 35px;
+  border-radius: 17px;
+  min-height: 65%;
 }
-
 .user__avatar {
   min-width: 65px;
   width: 78px;
   border: 5px #fff solid;
   border-radius: 50%;
 }
-.user__name {
-  background: #0000001f;
-  font-weight: 300;
-  font-size: 2.5rem;
-  position: relative;
-  text-transform: capitalize;
-}
-
-.side__filter {
-  width: 100%;
-  justify-content: space-around;
-  align-items: start;
+.user span {
   display: flex;
   flex-direction: column;
-  font-size: 1.125rem;
+  /* gap: 13px; */
+}
+.text {
+  font-size: 0.9rem;
   font-weight: 400;
-  padding: 35px 90px 90px 35px;
+  color: var(--Pale-Blue);
+}
+.user__name {
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  font-weight: 300;
 }
 
-.dashboard__trackers {
+.filter {
+  display: flex;
+  flex-direction: column; /*+row*/
+  justify-content: space-evenly;
+  min-height: 35%;
+  padding-left: 35px;
+}
+.filter__period {
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--Unsaturated-blue);
+}
+.filter__period input {
+  display: none;
+}
+.filter__period input:checked + label {
+  color: azure;
+}
+
+.trackers__side {
+  grid-column: 2/5;
+  grid-row: 1/3;
+  display: contents;
+}
+.tracker {
+  border-radius: 17px 17px 19px 19px;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Light-orange);
+}
+
+.tracker__icon {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  height: 45px;
+  min-height: 37px;
+  position: relative;
+  overflow: hidden;
+}
+.tracker__icon img {
+  position: absolute;
+  top: -10px;
+  padding-right: 30px;
+  width: 110px;
+}
+.tracker__time {
+  background-color: var(--Dark-blue);
+  border-radius: 17px;
+  height: calc(100% - 45px);
+  min-height: calc(100% - 37px);
+  display: flex;
+  flex-direction: column;
+  padding: 32px 30px 36px 30px;
+  gap: 40px; /*mobile*/
+}
+.tracker__time:hover {
+  background-color: hsl(236, 41%, 34%);
+  cursor: pointer;
+}
+.tracker__head {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.tracker__activity {
+  font-weight: 500;
+}
+.tracker__body {
+  display: flex;
+  flex-direction: column; /*row*/
+  justify-content: space-between;
+  height: 100%;
+  /* background: red; */
+}
+.tracker__hours {
+  font-size: 3.25rem;
+  font-weight: 300;
+}
+.tracker__last {
+  font-size: 0.875rem;
+
+  color: var(--Pale-Blue);
 }
 
-/*
-@media screen and (min-width: 1440px) {
- 
-}
-*/
-
-@media screen and (max-width: 376px) {
-  .dashboard {
-    flex-direction: column;
-    margin: 24px;
-    max-width: none;
-  }
-  .side__user {
-    padding: 32px;
-  }
-  .user {
-    flex-direction: row;
-    gap: 18px;
-  }
-  .user__name {
-    display: flex;
-    flex-direction: row;
-    font-size: 1.5rem;
-    gap: 5px;
-  }
-  .side__filter {
-    flex-direction: row;
-  }
-}
-
+/* attribution */
 .attribution {
   font-size: 11px;
   position: absolute;
