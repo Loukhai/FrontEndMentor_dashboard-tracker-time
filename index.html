@@ -14,167 +14,121 @@
 
     <title>Frontend Mentor | Time tracking dashboard</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-        display: "absolute";
-        bottom: 0;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- <main class="dahsboard__card">
-      <div class="dashboard__card--user">
-        <section class="user">
-          <div class="user__avatar">
-            <img src="images/image-jeremy.png" alt="user-avatar" />
-          </div>
-          <p>Report for</p>
-          <div class="user__name">Jeremy Robson</div>
-        </section>
-        <section class="filter__time">
-          <p class="time">Daily</p>
-          <p class="time">Weekly</p>
-          <p class="time">Monthly</p>
-        </section>
-      </div>
-      <div class="dashboard__card--tracker">
-        <div class="tracker">
-          <div class="tracker__header">
-            <div class="title">Work</div>
-            <div class="button">...</div>
-          </div>
-          <div class="tracker__body">
-            <div class="time"></div>
-            <div class="last-time"></div>
-          </div>
-        </div>
-      </div>
-    </main> -->
-
     <main class="dashboard">
-      <div>
-        <div class="box user__side">
-          <img
-            class="user__avatar"
-            src="images/image-jeremy.png"
-            alt="user__avatar"
-          />
-          <div>
-            <p class="text" role="text"></p>
-            <h1 class="user__name"></h1>
+      <div class="dashboard__side">
+        <div class="side__user">
+          <div class="user">
+            <img
+              class="user__avatar"
+              src="images/image-jeremy.png"
+              alt="user-avatar"
+            />
+            <div class="user__name" aria-describedby="user-name">
+              <div class="firstname">Jeremy</div>
+              <div class="lastname">Robson</div>
+            </div>
           </div>
         </div>
-        <div class="filter__period">
-          <p class="period"></p>
+        <div class="side__filter">
+          <p class="period">Daily</p>
+          <p class="period">Weekly</p>
+          <p class="period">Monthly</p>
         </div>
       </div>
 
-      <div class="svg">
-        <img src="images/icon-ellipsis.svg" alt="svg" />
-      </div>
-
-      <div class="box__tracker">
-        <div class="box__head">
-          <div class="activity"></div>
-          <div class="more"></div>
+      <div class="dashboard__trackers">
+        <div class="box__tracker">
+          <figure class="svg">
+            <img src="images/icon-work.svg" alt="svg" />
+          </figure>
+          <div class="box__head">
+            <div class="activity">Work</div>
+            <div class="more">...</div>
+          </div>
+          <div class="box__time">
+            <div class="hours">32hrs</div>
+            <div class="last">last Week - 36hrs</div>
+          </div>
         </div>
-        <div class="box__time">
-          <div class="hours"></div>
-          <div class="last"></div>
+        <div class="box__tracker">
+          <figure class="svg">
+            <img src="images/icon-work.svg" alt="svg" />
+          </figure>
+          <div class="box__head">
+            <div class="activity">Work</div>
+            <div class="more">...</div>
+          </div>
+          <div class="box__time">
+            <div class="hours">32hrs</div>
+            <div class="last">last Week - 36hrs</div>
+          </div>
+        </div>
+        <div class="box__tracker">
+          <figure class="svg">
+            <img src="images/icon-work.svg" alt="svg" />
+          </figure>
+          <div class="box__head">
+            <div class="activity">Work</div>
+            <div class="more">...</div>
+          </div>
+          <div class="box__time">
+            <div class="hours">32hrs</div>
+            <div class="last">last Week - 36hrs</div>
+          </div>
+        </div>
+        <div class="box__tracker">
+          <figure class="svg">
+            <img src="images/icon-work.svg" alt="svg" />
+          </figure>
+          <div class="box__head">
+            <div class="activity">Work</div>
+            <div class="more">...</div>
+          </div>
+          <div class="box__time">
+            <div class="hours">32hrs</div>
+            <div class="last">last Week - 36hrs</div>
+          </div>
+        </div>
+        <div class="box__tracker">
+          <figure class="svg">
+            <img src="images/icon-work.svg" alt="svg" />
+          </figure>
+          <div class="box__head">
+            <div class="activity">Work</div>
+            <div class="more">...</div>
+          </div>
+          <div class="box__time">
+            <div class="hours">32hrs</div>
+            <div class="last">last Week - 36hrs</div>
+          </div>
+        </div>
+        <div class="box__tracker">
+          <figure class="svg">
+            <img src="images/icon-work.svg" alt="svg" />
+          </figure>
+          <div class="box__head">
+            <div class="activity">Work</div>
+            <div class="more">...</div>
+          </div>
+          <div class="box__time">
+            <div class="hours">32hrs</div>
+            <div class="last">last Week - 36hrs</div>
+          </div>
         </div>
       </div>
     </main>
-
-    5hrs
-    <!-- daily -->
-    Previous - 7hrs
-    <!-- daily -->
-    32hrs
-    <!-- weekly -->
-    Previous - 36hrs
-    <!-- weekly -->
-    103hrs
-    <!-- monthly -->
-    Previous - 128hrs
-    <!-- monthly -->
-
-    Play 1hr
-    <!-- daily -->
-    Previous - 2hrs
-    <!-- daily -->
-    10hrs
-    <!-- weekly -->
-    Previous - 8hrs
-    <!-- weekly -->
-    23hrs
-    <!-- monthly -->
-    Previous - 29hrs
-    <!-- monthly -->
-
-    Study 0hrs
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    4hrs
-    <!-- weekly -->
-    Previous - 7hrs
-    <!-- weekly -->
-    13hrs
-    <!-- monthly -->
-    Previous - 19hrs
-    <!-- monthly -->
-
-    Exercise 1hr
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    4hrs
-    <!-- weekly -->
-    Previous - 5hrs
-    <!-- weekly -->
-    11hrs
-    <!-- monthly -->
-    Previous - 18hrs
-    <!-- monthly -->
-
-    Social 1hr
-    <!-- daily -->
-    Previous - 3hrs
-    <!-- daily -->
-    5hrs
-    <!-- weekly -->
-    Previous - 10hrs
-    <!-- weekly -->
-    21hrs
-    <!-- monthly -->
-    Previous - 23hrs
-    <!-- monthly -->
-
-    Self Care 0hrs
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    2hrs
-    <!-- weekly -->
-    Previous - 2hrs
-    <!-- weekly -->
-    7hrs
-    <!-- monthly -->
-    Previous - 11hrs
-    <!-- monthly -->
 
     <div class="attribution">
       Challenge by
       <!-- target="_blank" -->
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Rabiâ Loukhai</a>.
+      Coded by
+      <a href="https://rabie.vercel.app" target="_blank" rel="noopener"
+        >Rabiâ Loukhai</a
+      >.
     </div>
 
     <script src="index.js"></script>
