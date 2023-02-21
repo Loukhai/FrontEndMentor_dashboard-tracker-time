@@ -11,15 +11,15 @@ const fetchingData = async (path) => {
 const memoizingAsyncFunction = (fn, getKey) => {
   const memo = new Map();
 
-  return (...args) => {
+  return function (...args) {
     let key = getKey(...args);
     // console.log("key :" + key);
     if (memo.has(key)) return memo.get(key);
 
     fn.apply(this, [key]).then((data) => {
       memo.set(key, data);
-      // console.log("hello");
-      // console.log(memo);
+
+      console.log("memo inner  Fn apply", memo.get(key));
       return memo.get(key);
     });
   };
@@ -31,14 +31,15 @@ const memoAsyncFetchingData = memoizingAsyncFunction(
 );
 // window.onload = memoAsyncFetchingData("/data.json");
 
-const printTrackers = async (data, periodSelected) => {
+const printTrackers = (data, periodSelected) => {
   trackers_side.innerHTML = "";
 
-  console.log("data", data);
+  console.log("data in printFn", data); //problem => undefined
 
   for (const track in data) {
     if (Object.hasOwnProperty.call(data, track)) {
       const ele = data[track];
+      // console.log(ele);
 
       let title =
         ele.title == "Self Care"
@@ -73,9 +74,7 @@ const printTrackers = async (data, periodSelected) => {
   }
 };
 
-// window.onload = printTrackers(memoAsyncFetchingData("/data.json"), "daily");
-
-window.addEventListener("pageshow", () => {
+document.addEventListener("DOMContentLoaded", () => {
   printTrackers(memoAsyncFetchingData("/data.json"), "daily");
 });
 
