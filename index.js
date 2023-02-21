@@ -34,8 +34,6 @@ const memoAsyncFetchingData = memoizingAsyncFunction(
 const printTrackers = async (data, periodSelected) => {
   trackers_side.innerHTML = "";
 
-  // let data = dataFetched;
-  // === undefined ? await dataFetched : dataFetched;
   console.log("data", data);
 
   for (const track in data) {

@@ -15,5 +15,4 @@
 .prettierignore
 
 .vscode
-.readme.md
-.readme-template.md
+*.md
