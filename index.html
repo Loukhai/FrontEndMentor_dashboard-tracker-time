@@ -17,6 +17,7 @@
       @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
     </style>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleMedia.css" />
   </head>
   <body>
     <main class="dashboard">
@@ -37,23 +38,40 @@
             <input
               type="radio"
               name="period"
+              class="period"
               id="daily"
               value="daily"
               checked
+              onclick="onClickPeriodValue(this)"
             />
             <label for="daily">Daily</label>
           </span>
           <span class="filter__period">
-            <input type="radio" name="period" id="weekly" value="weekly" />
+            <input
+              type="radio"
+              class="period"
+              name="period"
+              id="weekly"
+              value="weekly"
+              onclick="onClickPeriodValue(this)"
+            />
             <label for="weekly">Weekly</label>
           </span>
           <span class="filter__period">
-            <input type="radio" name="period" id="monthly" value="monthly" />
+            <input
+              type="radio"
+              class="period"
+              name="period"
+              id="monthly"
+              value="monthly"
+              onclick="onClickPeriodValue(this)"
+            />
             <label for="monthly">Monthly</label>
           </span>
         </form>
       </div>
-      <div class="trackers__side">
+      <div class="trackers__side" id="tracker_side">
+        <!-- 
         <div class="tracker">
           <div class="tracker__icon">
             <img src="images/icon-work.svg" alt="work" />
@@ -156,6 +174,7 @@
             </div>
           </div>
         </div>
+         -->
       </div>
     </main>
 

@@ -100,9 +100,13 @@ body {
   padding-left: 35px;
 }
 .filter__period {
+  width: max-content;
   font-size: 1rem;
-  cursor: pointer;
   color: var(--Unsaturated-blue);
+}
+
+.filter__period label {
+  cursor: pointer;
 }
 .filter__period input {
   display: none;
@@ -117,12 +121,12 @@ body {
   display: contents;
 }
 .tracker {
+  background: #ea8725;
   border-radius: 17px 17px 19px 19px;
   width: 100%;
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--Light-orange);
 }
 
 .tracker__icon {
@@ -154,6 +158,9 @@ body {
   background-color: hsl(236, 41%, 34%);
   cursor: pointer;
 }
+.tracker__time:has(.tracker__more:hover) {
+  background-color: var(--Dark-blue);
+}
 .tracker__head {
   display: flex;
   flex-direction: row;
@@ -177,6 +184,9 @@ body {
   font-size: 0.875rem;
 
   color: var(--Pale-Blue);
+}
+.tracker__last span {
+  text-transform: capitalize;
 }
 
 /* attribution */
