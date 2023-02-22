@@ -19,8 +19,8 @@ const memoizingAsyncFunction = (fn, getKey) => {
     fn.apply(this, [key]).then((data) => {
       memo.set(key, data);
 
-      console.log("memo inner  Fn apply", memo.get(key));
-      return memo.get(key);
+      console.log("memo inner  Fn apply \n", memo);
+      return data;
     });
   };
 };
@@ -31,15 +31,18 @@ const memoAsyncFetchingData = memoizingAsyncFunction(
 );
 // window.onload = memoAsyncFetchingData("/data.json");
 
-const printTrackers = (data, periodSelected) => {
+const printTrackers = async (data, periodSelected) => {
   trackers_side.innerHTML = "";
 
-  console.log("data in printFn", data); //problem => undefined
+  console.log(data === undefined);
+  console.log("data in printFn", data); //data => undefined !
 
   for (const track in data) {
+    console.log("data in forLoop", data); //data => undefined !
+
     if (Object.hasOwnProperty.call(data, track)) {
       const ele = data[track];
-      // console.log(ele);
+      console.log(ele);
 
       let title =
         ele.title == "Self Care"
@@ -74,9 +77,10 @@ const printTrackers = (data, periodSelected) => {
   }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  printTrackers(memoAsyncFetchingData("/data.json"), "daily");
-});
+document.addEventListener(
+  "DOMContentLoaded",
+  printTrackers(memoAsyncFetchingData("/data.json"), "daily")
+);
 
 function onClickPeriodValue(period) {
   printTrackers(memoAsyncFetchingData("/data.json"), period.value);
