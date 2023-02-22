@@ -4,13 +4,14 @@ const trackers_side = document.querySelector("#tracker_side");
 const fetchingData = async (path) => {
   let response = await fetch(path);
   let result = await response.json();
-
+  console.log(`fetching`);
   return result;
 };
 
+/*
 const memoizingAsyncFunction = (fn, getKey) => {
   const memo = new Map();
-
+  
   return function (...args) {
     let key = getKey(...args);
     // console.log("key :" + key);
@@ -18,7 +19,7 @@ const memoizingAsyncFunction = (fn, getKey) => {
 
     fn.apply(this, [key]).then((data) => {
       memo.set(key, data);
-
+      
       console.log("memo inner  Fn apply \n", memo);
       return data;
     });
@@ -28,21 +29,22 @@ const memoizingAsyncFunction = (fn, getKey) => {
 const memoAsyncFetchingData = memoizingAsyncFunction(
   fetchingData,
   (path) => path
-);
+  );
+  */
 // window.onload = memoAsyncFetchingData("/data.json");
 
 const printTrackers = async (data, periodSelected) => {
   trackers_side.innerHTML = "";
-
+  console.log(`print`);
   console.log(data === undefined);
-  console.log("data in printFn", data); //data => undefined !
+  // console.log("data in printFn", data); //memoAsyncFetchingData data => undefined !
 
   for (const track in data) {
-    console.log("data in forLoop", data); //data => undefined !
-
+    // console.log("data in forLoop", data); //data => undefined !
+    console.log(`looping`);
     if (Object.hasOwnProperty.call(data, track)) {
       const ele = data[track];
-      console.log(ele);
+      // console.log(ele);
 
       let title =
         ele.title == "Self Care"
@@ -76,12 +78,20 @@ const printTrackers = async (data, periodSelected) => {
     }
   }
 };
-
+/*
 document.addEventListener(
   "DOMContentLoaded",
-  printTrackers(memoAsyncFetchingData("/data.json"), "daily")
-);
+  printTrackers(memoAsyncFetchingData("/data.json"), "daily"),
+  true
+  );
+  */
+
+const dataArr = [];
+
+fetchingData("/data.json")
+  .then((data) => dataArr.push(...data))
+  .then(() => printTrackers(dataArr, "daily"));
 
 function onClickPeriodValue(period) {
-  printTrackers(memoAsyncFetchingData("/data.json"), period.value);
+  printTrackers(dataArr, period.value);
 }
