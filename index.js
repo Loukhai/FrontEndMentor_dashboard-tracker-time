@@ -4,13 +4,13 @@ const trackers_side = document.querySelector("#tracker_side");
 const fetchingData = async (path) => {
   let response = await fetch(path);
   let result = await response.json();
-  console.log(`fetching`);
+  // console.log(`fetching`);
   return result;
 };
 
 /*
 const memoizingAsyncFunction = (fn, getKey) => {
-  const memo = new Map();
+  const memo = new Map(); 
   
   return function (...args) {
     let key = getKey(...args);
@@ -20,7 +20,7 @@ const memoizingAsyncFunction = (fn, getKey) => {
     fn.apply(this, [key]).then((data) => {
       memo.set(key, data);
       
-      console.log("memo inner  Fn apply \n", memo);
+      console.log("memo inner  Fn apply \n", memo); //data is here
       return data;
     });
   };
@@ -35,16 +35,13 @@ const memoAsyncFetchingData = memoizingAsyncFunction(
 
 const printTrackers = async (data, periodSelected) => {
   trackers_side.innerHTML = "";
-  console.log(`print`);
-  console.log(data === undefined);
-  // console.log("data in printFn", data); //memoAsyncFetchingData data => undefined !
+  // console.log(data === undefined);
+  // console.log("data in printFn", data); //w/ memoAsyncFetchingData data = undefined just on the  first time
 
   for (const track in data) {
-    // console.log("data in forLoop", data); //data => undefined !
     console.log(`looping`);
     if (Object.hasOwnProperty.call(data, track)) {
       const ele = data[track];
-      // console.log(ele);
 
       let title =
         ele.title == "Self Care"
@@ -78,11 +75,11 @@ const printTrackers = async (data, periodSelected) => {
     }
   }
 };
+
 /*
 document.addEventListener(
   "DOMContentLoaded",
-  printTrackers(memoAsyncFetchingData("/data.json"), "daily"),
-  true
+  printTrackers(memoAsyncFetchingData("/data.json"), "daily")
   );
   */
 

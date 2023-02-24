@@ -16,3 +16,5 @@
 
 .vscode
 *.md
+.gitignore
+/design
