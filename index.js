@@ -4,39 +4,11 @@ const trackers_side = document.querySelector("#tracker_side");
 const fetchingData = async (path) => {
   let response = await fetch(path);
   let result = await response.json();
-  // console.log(`fetching`);
   return result;
 };
 
-/*
-const memoizingAsyncFunction = (fn, getKey) => {
-  const memo = new Map(); 
-  
-  return function (...args) {
-    let key = getKey(...args);
-    // console.log("key :" + key);
-    if (memo.has(key)) return memo.get(key);
-
-    fn.apply(this, [key]).then((data) => {
-      memo.set(key, data);
-      
-      console.log("memo inner  Fn apply \n", memo); //data is here
-      return data;
-    });
-  };
-};
-
-const memoAsyncFetchingData = memoizingAsyncFunction(
-  fetchingData,
-  (path) => path
-  );
-  */
-// window.onload = memoAsyncFetchingData("/data.json");
-
 const printTrackers = async (data, periodSelected) => {
   trackers_side.innerHTML = "";
-  // console.log(data === undefined);
-  // console.log("data in printFn", data); //w/ memoAsyncFetchingData data = undefined just on the  first time
 
   for (const track in data) {
     console.log(`looping`);
@@ -57,7 +29,7 @@ const printTrackers = async (data, periodSelected) => {
       <div class="tracker__head">
         <p class="tracker__activity">${ele.title}</p>
         <div class="tracker__more">
-          <img src="images/icon-ellipsis.svg" alt="more-setting" />
+        <svg width="21" height="5" alt="more-setting" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
         </div>
       </div>
       <div class="tracker__body">
@@ -75,13 +47,6 @@ const printTrackers = async (data, periodSelected) => {
     }
   }
 };
-
-/*
-document.addEventListener(
-  "DOMContentLoaded",
-  printTrackers(memoAsyncFetchingData("/data.json"), "daily")
-  );
-  */
 
 const dataArr = [];
 

@@ -244,6 +244,9 @@ body {
 .tracker__time:has(.tracker__more:hover) {
   background-color: var(--Dark-blue);
 }
+.tracker__more:hover svg path {
+  fill: #fff;
+}
 .tracker__head {
   display: flex;
   flex-direction: row;
