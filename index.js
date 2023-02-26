@@ -49,7 +49,7 @@ const printTrackers = async (data, periodSelected) => {
 
 const dataArr = [];
 
-fetchingData("/data.json")
+fetchingData("./data.json")
   .then((data) => dataArr.push(...data))
   .then(() => printTrackers(dataArr, "daily"));
 
