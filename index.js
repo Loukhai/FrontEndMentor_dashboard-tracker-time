@@ -1,4 +1,3 @@
-// DOM
 const trackers_side = document.querySelector("#tracker_side");
 
 const fetchingData = async (path) => {

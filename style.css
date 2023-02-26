@@ -46,9 +46,6 @@ body {
   align-items: center;
   flex-wrap: nowrap;
   padding: var(--padding-block) var(--padding-inline);
-
-  /* transition: all 250ms; */
-  /* overflow: hidden; */
 }
 @media screen and (max-width: 900px) {
   body {
@@ -57,16 +54,12 @@ body {
   }
 }
 
-/* dashboard */
 .dashboard {
   display: grid;
   min-width: 100%;
   height: auto;
-  /* min-height: calc(100vh - (80px * 2)); */
-  /* border: 0.5px var(--Light-red) solid; */
   grid-auto-rows: max-content;
   grid-template-columns: 1fr;
-  /* justify-items: center; */
 
   gap: 30px;
   color: rgb(255, 255, 255);
@@ -75,16 +68,12 @@ body {
 @media screen and (min-width: 545px) {
   .dashboard {
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    /* grid-template-rows: 1fr 1fr; */
-    /* min-height: 51.8rem; */
   }
 }
 @media screen and (min-width: 1556px) {
   .dashboard {
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    /* grid-auto-rows: 1fr; */
     grid-template-rows: 1fr;
-    /* grid-auto-flow: column; */
   }
 }
 
@@ -92,7 +81,6 @@ body {
   grid-column: span 1;
   grid-row: span 2;
   background-color: var(--Dark-blue);
-  /* background-color: rgba(192, 180, 14, 0.558); */
   border-radius: 17px;
 }
 @media screen and (min-width: 1640px) {
@@ -108,12 +96,10 @@ body {
   padding-left: 35px;
   padding-bottom: 90px;
   display: flex;
-
-  flex-direction: column; /* +row*/
+  flex-direction: column;
   flex-wrap: nowrap;
   gap: 45px;
-  /* 
-   */
+
   border-radius: 17px;
 }
 
@@ -128,7 +114,7 @@ body {
 }
 
 .user__avatar {
-  /* aspect-ratio: 1/1; */
+  aspect-ratio: 1/1;
   min-width: 65px;
   max-width: 78px;
   border: 5px #fff solid;
@@ -201,9 +187,6 @@ body {
   outline: 1px #64646479;
   background: var(--Light-orange);
   border-radius: 17px 17px 19px 19px;
-  /* width: 100%; */
-  /* min-width: 257px; */
-  /* min-height: 100%; */
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -235,7 +218,7 @@ body {
   padding-inline: 30px;
   padding-top: 32px;
   padding-bottom: 36px;
-  gap: 40px; /*mobile*/
+  gap: 40px;
 }
 .tracker__time:hover {
   background-color: hsl(236, 41%, 34%);
@@ -260,7 +243,6 @@ body {
   flex-direction: column; /*row*/
   justify-content: space-between;
   height: 100%;
-  /* background: red; */
 }
 .tracker__hours {
   font-size: 3.25rem;
@@ -277,15 +259,15 @@ body {
 
 /* attribution */
 .attribution {
-  font-size: 11px;
+  font-size: 14px;
   position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
 
-  background: #64646479;
+  background: var(--Violet);
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(0, 0%, 100%);
   text-decoration: none;
 }
