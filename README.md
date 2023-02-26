@@ -88,6 +88,7 @@ To distribute the trackers auto in their cells use contents display.
 
 - All page content should be contained by landmarks : (header, footer , main, nav ).
 - Element "p" not allowed as child of element "span" .
+-
 
 ### Continued development
 
