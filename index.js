@@ -10,7 +10,6 @@ const printTrackers = async (data, periodSelected) => {
   trackers_side.innerHTML = "";
 
   for (const track in data) {
-    console.log(`looping`);
     if (Object.hasOwnProperty.call(data, track)) {
       const ele = data[track];
 
