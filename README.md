@@ -84,6 +84,11 @@ To distribute the trackers auto in their cells use contents display.
 }
 ```
 
+3- After Uploading Solution:
+
+- All page content should be contained by landmarks : (header, footer , main, nav ).
+- Element "p" not allowed as child of element "span" .
+
 ### Continued development
 
 - I will make a pieces of the code more efficient, like memoizing async function.
