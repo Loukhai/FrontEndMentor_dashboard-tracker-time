@@ -36,8 +36,8 @@ My screenshot of solution challenge time tracker dashboard FrontendMentor.
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution In FrontEnd Mentor](https://www.frontendmentor.io/solutions/responsive-grid-layout-fetching-data-and-printing-vVghKV2mI1)
+- Live Site URL: [live site](https://loukhai.github.io/FrontEndMentor_dashboard-tracker-time/)
 
 ## My process
 
