@@ -40,7 +40,7 @@
     "title": "Study",
     "timeframes": {
       "daily": {
-        "current": 0,
+        "current": 3,
         "previous": 1
       },
       "weekly": {
@@ -58,8 +58,8 @@
     "title": "Exercise",
     "timeframes": {
       "daily": {
-        "current": 1,
-        "previous": 1
+        "current": 2,
+        "previous": 5
       },
       "weekly": {
         "current": 4,
@@ -94,12 +94,12 @@
     "title": "Self Care",
     "timeframes": {
       "daily": {
-        "current": 0,
+        "current": 1,
         "previous": 1
       },
       "weekly": {
-        "current": 2,
-        "previous": 2
+        "current": 3,
+        "previous": 1
       },
       "monthly": {
         "current": 7,
